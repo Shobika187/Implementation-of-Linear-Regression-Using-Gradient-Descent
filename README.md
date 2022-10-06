@@ -35,9 +35,7 @@ plt.xlabel("Population of City (10,000s)")
 plt.ylabel("Profit($10,000)")
 plt.title("Profit Prediction")
 
-"""
-Take in a np array X,y,theta and generate the cost function of using theta as parameter in a linear regression model
-"""
+
 def computeCost(X,y,theta):
     m=len(y) #length of the training data
     h=X.dot(theta) #hypothesis
@@ -53,10 +51,7 @@ theta=np.zeros((2,1))
 
 computeCost(X,y,theta) #call the function
 
-"""
-Take in np array X,y and theta and update theta by taking num_iters gradient steps with learning rate of alpha 
-return theta and the list of the cost of theta during each iteration
-"""
+
 def gradientDescent(X,y,theta,alpha,num_iters):
     m=len(y)
     J_history=[]
@@ -88,9 +83,6 @@ plt.xlabel("Population of City (10,000s)")
 plt.ylabel("Profit($10,000)")
 plt.title("Profit Prediction")
 
-"""
-Takes in numpy array of x and theta and return the predicted value of y based on theta
-"""
 def predict(x,theta):
     predictions = np.dot(theta.transpose(),x)
     return predictions[0]
